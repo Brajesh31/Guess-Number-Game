@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess a Number</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+  
+</head>
+<body>
+  <!-- //header section -->
+<header>
+  <span class="material-symbols-outlined">
+    menu
+    </span>
+    <h2>🎯Guess the Number Game</h2>
+    <button type="button" onclick="resetGame()">
+      <i class='bx bx-reset'><span class="reset-text">Reset</span></i>
+    </button>
+</header>
+<!-- //main section -->
+<main id="main">
+
+  <div class="row1">
+    <div class="instructions-container">
+      <div class="instructions">
+        <ul>
+          <h2>Game Instructions</h2>
+          <li>Click on the <strong>Start The Game</strong> button to begin the game.</li>
+          <li>Three random numbers will be shown on three cards.</li>
+          <li>Enter your guess in the input field for the correct number.</li>
+          <li>Click on the <strong>Check The Result</strong> button to submit your guess.</li>
+          <li>You will get notified if your guess is correct or wrong.</li>
+          <li>The game will end after 90 seconds or 10 correct guesses.</li>
+          <li>Try to guess 10 correct numbers to win the game!</li>
+        </ul>
+      </div>
+    </div>
+    <div class="timer-container">
+      <div class="circle" id="circle"></div>
+      <div class="inner-circle timer" id="time">1.30</div>
+    </div>
+  </div>
+
+  <div class="row2">
+    <button type="button" id="startBtn" onclick="buttonClickActions()">Start The Game</button>
+  </div>
+  <div class="row3">
+    <label for="number">Enter the number </label>
+    <input type="number" name="number" id="inputNumber" placeholder="Guess the number">
+    <button type="submit" id="checkBtn" onclick="checkButtonClickAction()">Check The Result</button>
+  </div>
+  
+  <div id="guessCards" class="row4">
+    <div class="card" id="card1"></div>
+    <div class="card" id="card2"></div>
+    <div class="card" id="card3"></div>
+  </div>
+
+</main>
+
+  
+
+
+  <script src="script.js"></script>
+</body>
+</html>

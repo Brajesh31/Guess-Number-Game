@@ -1,0 +1,520 @@
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  height: 100vh;
+  font-family: "Sawarabi Gothic", sans-serif;
+  background-color: #aaa;
+}
+header {
+  width: 100%;
+  height: 80px;
+  padding: 0 15px;
+  background-color: #798086;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.material-symbols-outlined {
+  display: none !important;
+  color: #fff;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+header h2 {
+  color: #fff;
+  letter-spacing: 1px;
+  text-align: center;
+}
+#toggleInstructions {
+  display: none;
+}
+header button {
+  padding: 10px 20px;
+  background: transparent;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  transition: background 0.3s ease;
+}
+header button:hover {
+  animation: none;
+}
+.bx {
+  font-size: 24px;
+  animation: rotate360 2s linear 1;
+}
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.heartContainer {
+  display: flex;
+  font-size: 1.5rem;
+  color: #fff;
+  letter-spacing: 1px;
+}
+.heartContainer h4 {
+  font-size: 1.25rem;
+}
+
+main {
+  background: #D4AFCD;
+  height: 100vh;
+  padding: 15px;
+  /* row-gap: 25px; */
+  overflow-y: scroll;
+}
+
+.row1 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.instructions{
+  margin-left: 25px;
+
+}
+.timer {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #333;
+  border: 1px solid green;
+}
+.row2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.row2 button {
+  align-items: center;
+  outline: none;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.row2 button:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.row2 button:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.row2 button:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+.row3 {
+  margin: 40px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  width: auto;
+  transition: all 0.5s ease;
+  transform: translateY(40px);
+  visibility: hidden;
+  opacity: 0;
+}
+
+label {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #333;
+}
+input {
+  height: 40px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1.5rem;
+  outline: none;
+}
+
+.row3 button {
+  background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+  border: 0;
+  border-radius: 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+.row3 button:not([disabled]):focus {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.row3 button:not([disabled]):hover {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+.row4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  transition: all 0.5s ease-in-out;
+  transform: translateY(40px);
+  visibility: hidden;
+  opacity: 0;
+}
+.row4 .card {
+  height: 100px;
+  width: 100px;
+  margin: 10px;
+  border: none;
+  outline: none;
+  border: 2px solid #aaa;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1.5rem;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  background: linear-gradient(45deg, #ff7eb3, #ff758c);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+#answerBanner{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  padding: 20px 30px;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #124E78;
+  letter-spacing: 1px;
+  opacity: 1;
+  z-index: 100;
+  transition: all 0.4s ease-in-out;
+}
+/* Show Popup Animation */
+#answerBanner.showBanner {
+  display: flex !important;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+/* Hide Popup Animation */
+#answerBanner.hideBanner {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.8); 
+  transition: all 0.3s ease-in-out;
+}
+
+
+/* -------------timer UI ---------- */
+.timer-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+.circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(#ff5722 0deg, #ddd 0deg);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  transition: background 0.1s linear;
+}
+.inner-circle {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  font-size: 2em;
+  font-weight: bold;
+  color: #ff5722;
+}
+
+.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.5s ease-in-out;
+}
+#resultBanner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  width: auto;
+  height: 120px;
+  border-radius: 12px;
+  background: #CAFFB9;
+  padding: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  animation: fadeIn 0.5s ease-in-out;
+}
+#resultBanner .close-btn {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s ease;
+}
+#resultBanner .close-btn:hover {
+  color: red;
+}
+#resultBanner p {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #124E78;
+}
+@keyframes fadeIn {
+  from { opacity: 0;}
+  to { opacity: 1; }
+}
+@keyframes fadeOut {
+  from { opacity: 1;}
+  to { opacity: 0;}
+}
+
+/* =============Media Query For Tablet===============  */
+@media screen and (max-width: 768px) {
+  header {
+    height: 60px;
+    flex-direction: row;
+    text-align: center;
+    padding: 5px;
+  }
+
+  .material-symbols-outlined {
+    position: absolute;
+    left: 12px;
+    display: inline-block !important;
+    font-size: 28px;
+    cursor: pointer;
+    border: none;
+    transition: color 0.3s;
+  }
+  .material-symbols-outlined:hover {
+    color: #aaa;
+  }
+  .bx-reset {
+    position: absolute;
+    right: 15px;
+    font-size: 1rem;
+
+  }
+  .reset-text{
+    display: none !important;
+  }
+  header h2 {
+    font-size: 1.12rem !important;
+    padding: 8px;
+  }
+  .instructions {
+    font-size: 1rem;
+    color: #2E3532;
+    background: #C7CEDB;
+    text-align: left;
+    position: absolute;
+    top: 10%;
+    left: -25px;
+    padding: 20px;
+    transform: translateX(-500px);
+    transition: transform 0.5s ease-in-out;
+    z-index: 1500;
+  }
+  .instructions ul li {
+    position: relative;
+    left: -300px;
+    font-size: 18px;
+    padding: 5px 0;
+    padding-left: 10px;
+    list-style: none;
+    opacity: 0;
+    transition: left 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+.instructions ul li::before {
+  content: "🎯";
+  position: absolute;
+  left: -20px;
+  font-size: 18px;
+  color: gray;
+  filter: grayscale(100%);
+}
+  /* Animate each list item one by one */
+.instructions ul li:nth-child(2) { transition-delay: 0.1s; }
+.instructions ul li:nth-child(3) { transition-delay: 0.2s; }
+.instructions ul li:nth-child(4) { transition-delay: 0.3s; }
+.instructions ul li:nth-child(5) { transition-delay: 0.4s; }
+.instructions ul li:nth-child(6) { transition-delay: 0.5s; }
+.instructions ul li:nth-child(7) { transition-delay: 0.6s; }
+.instructions ul li:nth-child(8) { transition-delay: 0.7s; }
+
+.showInstructions {
+  transform: translateX(0);
+}
+
+.showInstructions ul li {
+  left: 0;
+  opacity: 1;
+}
+
+  header button {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  main {
+    padding: 8px;
+  }
+
+  .row1, .row2, .row3{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .row1 {
+    gap: 15px;
+  }
+
+  .row2, .row3{
+    margin-top: 15px;
+    gap: 10px;
+  }
+
+  label, input {
+    font-size: 1.2rem;
+  }
+
+  .row2 button {
+    margin-top: 25px;
+    font-size: 16px;
+    height: 40px;
+    padding: 10px;
+  }
+
+  .row4 .card {
+    margin-top: -10px;
+    width: 80px;
+    height: 80px;
+    font-size: 1.2rem;
+  }
+
+  #answerBanner, #resultBanner {
+    width: 90%;
+    font-size: 1.5rem;
+    padding: 15px;
+  }
+}
+
+/* ============Media Query for mobile scrren===================== */
+@media screen and (max-width: 480px) {
+  header {
+    height: 50px;
+    padding: 5px;
+  }
+
+  header h2 {
+    font-size: 0.9rem;
+  }
+
+  header button {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .row2 button {
+    font-size: 14px;
+    height: 35px;
+  }
+
+  label, input {
+    font-size: 1rem;
+  }
+
+  .row4 .card {
+    width: 70px;
+    height: 70px;
+    font-size: 1rem;
+  }
+  #answerBanner, #resultBanner {
+    font-size: 1.3rem;
+  }
+}
